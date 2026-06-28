@@ -2,6 +2,14 @@ import { db } from "@/db"
 import { workouts, workoutExercises, exercises, sets } from "@/db/schema"
 import { eq, and, count } from "drizzle-orm"
 
+export async function createWorkout(userId: string, date: string, notes?: string) {
+  const [workout] = await db
+    .insert(workouts)
+    .values({ userId, date, notes })
+    .returning()
+  return workout
+}
+
 export type WorkoutWithDetails = {
   id: number
   date: string
