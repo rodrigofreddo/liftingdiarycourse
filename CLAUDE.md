@@ -4,6 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @AGENTS.md
 
+## IMPORTANT: Docs-First Rule
+
+**Before writing any code, always read the relevant documentation file in the `/docs` directory first.** This is mandatory — not optional. Find the doc that covers the feature, pattern, or API you are about to implement and read it before producing any output. Do not rely on training data or assumptions when a `/docs` file exists for the topic.
+
+- /docs/ui.md
+
 ## Commands
 
 ```bash
