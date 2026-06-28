@@ -49,7 +49,7 @@ export default function RootLayout({
                 </SignUpButton>
               </Show>
               <Show when="signed-in">
-                <UserButton />
+                <UserButton afterSignOutUrl="/sign-in" />
               </Show>
             </div>
           </header>
